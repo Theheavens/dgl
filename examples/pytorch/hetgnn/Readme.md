@@ -12,7 +12,12 @@ It will be integrated into an open toolkit, so it will not be merged into the dg
 ## Datasets
 
 - We use the academic dataset released by the [author](https://github.com/chuxuzhang/KDD2019_HetGNN/tree/master/data/academic).
+  - For author link prediction
+    - a_a_list_test.txt
+    - a_a_list_train.txt
 - We process the dataset and save it as dgl.heterograph
+  - Get academic.bin by using below command
+  - wget https://s3.cn-north-1.amazonaws.com.cn/dgl-data/dataset/academic.bin
 
 ## Demo Usage
 
@@ -24,21 +29,16 @@ Hyperparameter can be modified in the file *config.ini*.
 
 ## Notice
 
-Sampling Heterogeneous Neighbors(C1)
+##### Sampling Heterogeneous Neighbors(C1)
 
-​	Hetgnn_graph() will build the graph used in the aggregate neighbors and will be saved as dgl.graph
+​			Hetgnn_graph() will build the graph used in the aggregate neighbors and will be saved as dgl.graph
 
-In HetGNN-model:
+##### HetGNN-model contains two components:
 
-​	It contains two components:
-
-​		Encoding Hetergeneous Contens(C2)
-
-​		Aggregating Heterogeneous Neighbors(C3)
-
-​			Same Type Neighbors Aggregation
-
-​			Types Combination
+- Encoding Hetergeneous Contens(C2)
+- Aggregating Heterogeneous Neighbors(C3)
+  - Same Type Neighbors Aggregation
+  - Types Combination
 
 
 
